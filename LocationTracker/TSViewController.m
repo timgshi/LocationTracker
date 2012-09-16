@@ -8,7 +8,9 @@
 
 #import "TSViewController.h"
 
-@interface TSViewController ()
+@interface TSViewController () <CLLocationManagerDelegate>
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager startMonitoringSignificantLocationChanges];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,6 +29,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
 }
 
 @end

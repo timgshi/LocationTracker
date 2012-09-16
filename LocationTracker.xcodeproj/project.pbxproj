@@ -22,6 +22,7 @@
 		4BA88E051605543B007542B3 /* LocationTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA88E041605543B007542B3 /* LocationTrackerTests.m */; };
 		4BA88E0F160554D9007542B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88E0E160554D9007542B3 /* Parse.framework */; };
 		4BA88E10160554D9007542B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88E0E160554D9007542B3 /* Parse.framework */; };
+		4BA88E121605551E007542B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88E111605551E007542B3 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4BA88E031605543B007542B3 /* LocationTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTrackerTests.h; sourceTree = "<group>"; };
 		4BA88E041605543B007542B3 /* LocationTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTrackerTests.m; sourceTree = "<group>"; };
 		4BA88E0E160554D9007542B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		4BA88E111605551E007542B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA88E121605551E007542B3 /* CoreLocation.framework in Frameworks */,
 				4BA88DDA1605543A007542B3 /* UIKit.framework in Frameworks */,
 				4BA88DDC1605543A007542B3 /* Foundation.framework in Frameworks */,
 				4BA88DDE1605543A007542B3 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +108,7 @@
 		4BA88DD81605543A007542B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BA88E111605551E007542B3 /* CoreLocation.framework */,
 				4BA88E0E160554D9007542B3 /* Parse.framework */,
 				4BA88DD91605543A007542B3 /* UIKit.framework */,
 				4BA88DDB1605543A007542B3 /* Foundation.framework */,
