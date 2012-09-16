@@ -20,6 +20,8 @@
 		4BA88DFA1605543B007542B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88DDB1605543A007542B3 /* Foundation.framework */; };
 		4BA88E021605543B007542B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BA88E001605543B007542B3 /* InfoPlist.strings */; };
 		4BA88E051605543B007542B3 /* LocationTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA88E041605543B007542B3 /* LocationTrackerTests.m */; };
+		4BA88E0F160554D9007542B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88E0E160554D9007542B3 /* Parse.framework */; };
+		4BA88E10160554D9007542B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA88E0E160554D9007542B3 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		4BA88E011605543B007542B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4BA88E031605543B007542B3 /* LocationTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTrackerTests.h; sourceTree = "<group>"; };
 		4BA88E041605543B007542B3 /* LocationTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTrackerTests.m; sourceTree = "<group>"; };
+		4BA88E0E160554D9007542B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				4BA88DDA1605543A007542B3 /* UIKit.framework in Frameworks */,
 				4BA88DDC1605543A007542B3 /* Foundation.framework in Frameworks */,
 				4BA88DDE1605543A007542B3 /* CoreGraphics.framework in Frameworks */,
+				4BA88E0F160554D9007542B3 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 				4BA88DF81605543B007542B3 /* SenTestingKit.framework in Frameworks */,
 				4BA88DF91605543B007542B3 /* UIKit.framework in Frameworks */,
 				4BA88DFA1605543B007542B3 /* Foundation.framework in Frameworks */,
+				4BA88E10160554D9007542B3 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,7 @@
 		4BA88DD81605543A007542B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BA88E0E160554D9007542B3 /* Parse.framework */,
 				4BA88DD91605543A007542B3 /* UIKit.framework */,
 				4BA88DDB1605543A007542B3 /* Foundation.framework */,
 				4BA88DDD1605543A007542B3 /* CoreGraphics.framework */,
@@ -361,6 +367,10 @@
 		4BA88E091605543B007542B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
 				INFOPLIST_FILE = "LocationTracker/LocationTracker-Info.plist";
@@ -372,6 +382,10 @@
 		4BA88E0A1605543B007542B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
 				INFOPLIST_FILE = "LocationTracker/LocationTracker-Info.plist";
@@ -387,6 +401,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
@@ -404,6 +419,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
