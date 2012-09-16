@@ -32,7 +32,15 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    NSLog(@"%@", locations);
+    for (CLLocation *location in locations) {
+        PFObject *obj = [PFObject objectWithClassName:@"TrackedLocations"];
+        PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:location.coordinate.latitude
+                                                   longitude:location.coordinate.longitude];
+        [obj setObject:point forKey:@"location"];
+        [obj setObject:[NSNumber numberWithDouble:location.altitude] forKey:@"altitude"];
+        [obj setObject:location.timestamp forKey:@"timestamp"];
+        [obj saveEventually];
+    }
 }
 
 @end
