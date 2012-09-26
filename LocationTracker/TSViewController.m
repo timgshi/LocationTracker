@@ -40,6 +40,8 @@
         [obj setObject:[NSNumber numberWithDouble:location.altitude] forKey:@"altitude"];
         [obj setObject:location.timestamp forKey:@"timestamp"];
         [obj saveEventually];
+        [self.latitudeLabel setText:[NSString stringWithFormat:@"%f", location.coordinate.latitude]];
+        [self.longitudeLabel setText:[NSString stringWithFormat:@"%f", location.coordinate.longitude]];
     }
 }
 

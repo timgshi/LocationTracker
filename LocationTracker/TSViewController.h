@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TSViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *longitudeLabel;
 
 @end
